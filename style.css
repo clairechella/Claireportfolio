@@ -1,0 +1,184 @@
+/* ========== Global Reset ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fdfdfd;
+    color: #333;
+    line-height: 1.7;
+    padding: 20px;
+  }
+  
+  /* ========== Header ========== */
+  header {
+    text-align: center;
+    background-color: #1f1f1f;
+    color: #fff;
+    padding: 40px 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+  }
+  
+  header a {
+    color: #ffd700;
+    text-decoration: none;
+  }
+  
+  header a:hover {
+    text-decoration: underline;
+  }
+  
+  /* ========== Navigation ========== */
+  nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    list-style: none;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #1f1f1f;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    background-color: #e0e0e0;
+  }
+  
+  /* ========== Section Styling ========== */
+  section {
+    margin-bottom: 50px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #fafafa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  }
+  
+  section h2 {
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+    color: #333;
+  }
+  
+  /* ========== Job Cards ========== */
+  .job-card {
+    background-color: #fff;
+    padding: 20px;
+    border-left: 5px solid #00bcd4;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+  }
+  
+  .job-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .job-card h3 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .job-card span {
+    font-size: 0.9em;
+    color: #888;
+  }
+  
+  .job-card ul {
+    list-style: disc inside;
+    color: #444;
+  }
+  
+  /* ========== Skills ========== */
+  .skills-category {
+    margin-bottom: 20px;
+  }
+  
+  .skills-category h4 {
+    font-weight: bold;
+    color: #4caf50;
+    margin-bottom: 8px;
+  }
+  
+  .skills-category p {
+    color: #444;
+  }
+  
+  /* ========== Volunteer Section ========== */
+  #volunteer {
+    background-color: #fff0f5;
+    border-left: 5px solid #ff69b4;
+  }
+  
+  .volunteer-list {
+    list-style: square inside;
+    margin-top: 10px;
+    color: #555;
+  }
+  
+  .volunteer-list li {
+    margin-bottom: 8px;
+  }
+
+  /* ========== Awards & Honors ========== */
+#awards {
+    background-color: #fffbea;
+    border-left: 5px solid #ffd700;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+  }
+  
+  .awards-list {
+    list-style: circle inside;
+    margin-top: 10px;
+    color: #555;
+  }
+  
+  .awards-list li {
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  
+  
+  /* ========== Certifications ========== */
+  #certifications {
+    background-color: #e6f7ff;
+    border-left: 5px solid #1e90ff;
+  }
+  
+  #certifications p {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* ========== Contact Section ========== */
+  #contact a {
+    color: #1e90ff;
+    text-decoration: none;
+  }
+  
+  #contact a:hover {
+    text-decoration: underline;
+  }
+  
+  /* ========== Footer ========== */
+  footer {
+    text-align: center;
+    color: #aaa;
+    font-size: 0.9rem;
+    margin-top: 60px;
+  }
+  
