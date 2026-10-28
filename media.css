@@ -56,3 +56,7 @@ ul.chips li{border:1px solid #3d3535;padding:5px 14px;border-radius:30px;font-si
 .about p,.about h2{max-width:75ch}
 .me{float:right;width:220px;aspect-ratio:4/5;object-fit:cover;object-position:center top;border-top:3px solid #d4213d;margin:0 0 20px 32px}
 @media(max-width:640px){.me{float:none;display:block;width:180px;margin:0 0 20px}}
+
+.certs{margin-bottom:60px}
+.cert-img{display:block;width:100%;height:auto;margin-bottom:12px}
+.certs article small{color:#9a918d}

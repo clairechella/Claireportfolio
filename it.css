@@ -43,3 +43,5 @@ footer{border-top:1px solid var(--line);padding-top:18px;color:var(--mut)}
 .hero{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
 .me{width:230px;aspect-ratio:1/1;object-fit:cover;object-position:center top;border:1px solid var(--cy);box-shadow:10px 10px 0 rgba(56,214,255,.15)}
 @media(max-width:760px){.hero{grid-template-columns:1fr}.me{width:180px;order:-1}}
+
+.cert-img{display:block;width:100%;height:auto;margin-bottom:12px;border:1px solid var(--line)}
