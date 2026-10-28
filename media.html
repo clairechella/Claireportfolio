@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Media Work | Claire Natasha Chella</title>
+<meta name="description" content="Social media management, video editing and film projects by Claire Natasha Chella, including Scarlet Vision.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="media.css">
+</head>
+<body>
+<nav><a href="index.html">Claire Natasha Chella</a><span><a href="media.html" aria-current="page">Media</a><a href="it.html">IT</a><a href="design.html">Design</a></span></nav>
+<main>
+<section class="hero">
+  <div class="strip"><img src="chim.jpg" alt="Chimwela series poster, a Scarlet Vision film showing three students outside the Campus Center"></div>
+  <div class="hero-text">
+    <p>A Scarlet Vision series, 2022 – 2025</p>
+    <h1>Chimwela</h1>
+    <p class="lede">A campus series from Scarlet Vision, where I served as Executive Producer and Board Member. I co-created the series and starred in, recorded, edited and directed some of the episodes (full credits are on YouTube).</p>
+    <a class="btn" href="https://youtu.be/3i19V5xx_JU?si=wFKoPkLtASQBjLbh">Watch on YouTube</a>
+  </div>
+</section>
+
+<section class="watch">
+<h2>Watch Chimwela</h2>
+<div class="eps" role="group" aria-label="Choose an episode">
+  <button type="button" data-id="3i19V5xx_JU" data-title="CHIMWELA Episode 1: New Beginnings" aria-pressed="true">Episode 1: New Beginnings</button>
+  <button type="button" data-id="PBqDTjhdm5E" data-title="CHIMWELA Episode 2: Family Conflicts" aria-pressed="false">Episode 2: Family Conflicts</button>
+  <!-- ADD AN EPISODE: copy a button above and change data-id (the code after youtu.be/ in the link) and the names. -->
+</div>
+<div class="embed"><iframe id="player" src="https://www.youtube-nocookie.com/embed/3i19V5xx_JU" title="CHIMWELA Episode 1: New Beginnings" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+<p>Want more? <a href="https://www.youtube.com/channel/UC48bfQAmUGujSfOD3SgVIpg" target="_blank" rel="noopener">View more episodes on the Scarlet Vision YouTube channel</a></p>
+</section>
+<script>
+document.querySelectorAll('.eps button').forEach(function(b){
+  b.addEventListener('click',function(){
+    var f=document.getElementById('player');
+    f.src='https://www.youtube-nocookie.com/embed/'+b.dataset.id;
+    f.title=b.dataset.title;
+    document.querySelectorAll('.eps button').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+  });
+});
+</script>
+
+<section class="about">
+<img class="me" src="claire-media.jpg" alt="Photo of Claire Natasha Chella" width="220" height="275" onerror="this.style.display='none'">
+<h2>About my media work</h2>
+<p>I'm a creative, results-driven content creator with experience in social media content, video editing, digital marketing and brand storytelling. I produce content for TikTok, Instagram, YouTube and Facebook, manage online communities and support marketing campaigns. My goal is high-quality content that drives engagement, grows brand awareness and connects with audiences.</p>
+<ul class="chips plain"><li>TikTok</li><li>Instagram</li><li>YouTube</li><li>Facebook</li></ul>
+</section>
+<h2>Featured content</h2>
+<div class="grid links"><article><h3>Northrise University</h3><small>TikTok · Recorded, created, edited</small><div class="chips"><a href="https://www.tiktok.com/@northriseuniversity/video/7547977603928329477?_r=1&amp;_t=ZT-9AnstWxd03S" target="_blank" rel="noopener">Video 1</a><a href="https://www.tiktok.com/@northriseuniversity/video/7542795092050857221?_r=1&amp;_t=ZT-9AnsjWAt7Nu" target="_blank" rel="noopener">Video 2</a><a href="https://www.tiktok.com/t/ZTfaRM56T/" target="_blank" rel="noopener">Video 3</a></div><p class="note">I have also made many other reels for the Northrise University Instagram account.</p></article><article><h3>Scarlet Vision</h3><small>TikTok · Filmed, edited, created</small><div class="chips"><a href="https://www.tiktok.com/t/ZTfaNdvcL/" target="_blank" rel="noopener">SV 1</a><a href="https://www.tiktok.com/t/ZTfaNNrEr/" target="_blank" rel="noopener">SV 2</a><a href="https://www.tiktok.com/t/ZTfaNSbBJ/" target="_blank" rel="noopener">SV 3</a><a href="https://www.tiktok.com/t/ZTfaNATV9/" target="_blank" rel="noopener">SV 4</a><a href="https://www.tiktok.com/t/ZTfaNbE2X/" target="_blank" rel="noopener">SV 5</a></div></article><article><h3>Instagram Reels</h3><small>Editing and content creation, and many others</small><div class="chips"><a href="https://www.instagram.com/reel/C8Eo04zN-15/" target="_blank" rel="noopener">Featured Reel</a><a href="https://www.instagram.com/reel/C7RQEAsv84L/" target="_blank" rel="noopener">10-Day Countdown Campaign</a></div></article><article><h3>Self-Produced Projects</h3><small>Instagram · Personal creative work, self-produced</small><div class="chips"><a href="https://www.instagram.com/reel/DR2pX3IiGsN/?xtok=YzA5a3R4YmxybjZ6" target="_blank" rel="noopener">Reel 1</a><a href="https://www.instagram.com/reel/DS91LdNiNvK/?exln=MXV4YmFxeDVuNGhwMA==" target="_blank" rel="noopener">Reel 2</a><a href="https://www.instagram.com/reel/DaFnXgNItV3/?psln=MWZodzNqZXlsamx1eQ==" target="_blank" rel="noopener">Reel 3</a></div></article><article><h3>Chimwela Series</h3><small>YouTube · Co-creator and producer</small><div class="chips"><a href="https://youtu.be/PBqDTjhdm5E?si=YrLR5T67kY7ff-4j" target="_blank" rel="noopener">Watch the series</a></div></article></div>
+
+<h2>The work</h2>
+<div class="grid">
+<article><h3>WornWith</h3><small>July 2026 – Present</small><p>Currently running the WornWith social media account.</p><p><a href="https://www.tiktok.com/@wornwith?_r=1&amp;_t=ZS-9AvWdNtzrW5" target="_blank" rel="noopener">View the account on TikTok</a></p></article>
+<article><h3>Scarlet Vision</h3><small>2022 – 2025</small><p>Scarlet Vision is a startup media company for creative storytelling and digital entertainment. I served as Executive Producer and Board Member and helped build it. I co-created Chimwela, recorded, edited and produced video, ran promo campaigns, and helped plan and host public events.</p><p>Worked with writers, actors, editors and production teams from concept to final production.</p></article>
+<article><h3>Northrise University Media</h3><small>2022 – Present</small><p>Media Team: promo content for university events, videos for social media, photography and videography coverage, and content that increased engagement across campus platforms. I also appeared on camera for the chapel live streams and the last three graduation live streams.</p><p>Media Council: planning media strategies, campaigns, branding initiatives and digital communications with the marketing and communications teams.</p></article>
+<article><h3>Social Media and Freelance</h3><small>2024 – Present</small><p>Video and static posts, branding and campaign rollouts for Stacey Servana and other freelance clients, plus my own content: scripts, trend research, brand collaborations and short-form editing.</p></article>
+<article><h3>Mount Zion Ndola</h3><small>2022</small><p>Photography, videography and live streaming at church events, and digital media content that promoted events and community engagement.</p></article>
+<article><h3>Northern Vision (now Northern Arts)</h3><small>2023 – 2024</small><p>A Northrise University club that I co-founded, later renamed Northern Arts. I served as Vice President and was later elected President. I led meetings, coordinated events, produced short films and event visuals, and designed promotional assets.</p></article>
+</div>
+
+<h2>Skills</h2>
+<ul class="chips plain skills"><li>Social Media Management</li><li>Content Creation</li><li>Video Production</li><li>Video Editing</li><li>Short-form Content Strategy</li><li>TikTok Marketing</li><li>Instagram Marketing</li><li>Facebook Marketing</li><li>YouTube Content</li><li>Copywriting</li><li>Storytelling</li><li>Graphic Design</li><li>Digital Marketing</li><li>Brand Marketing</li><li>Community Engagement</li><li>Social Media Analytics</li><li>Photography and Videography</li><li>Creative Direction</li><li>Campaign Planning</li><li>Event Promotion</li><li>Proofreading and Editing</li></ul>
+<ul class="tools"><li>Premiere Pro</li><li>Photoshop</li><li>Illustrator</li><li>CapCut</li><li>Canva</li><li>Blackmagic</li></ul>
+
+<footer><p>Have a project in mind? <a href="mailto:tashachella@gmail.com">tashachella@gmail.com</a></p><p>© 2026 Claire Natasha Chella</p></footer>
+</main>
+</body>
+</html>

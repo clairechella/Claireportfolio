@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Graphic Design | Claire Natasha Chella</title>
+<meta name="description" content="Branding, posters, social media and print design by Claire Natasha Chella.">
+<style>
+  :root {
+    --bg: #f6f6f4;
+    --text: #1b1b1b;
+    --muted: #6b6b66;
+    --line: #dcdcd6;
+    --placeholder: #e6e6e1;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #151515;
+      --text: #f0f0ec;
+      --muted: #a0a09a;
+      --line: #333330;
+      --placeholder: #232321;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+  }
+  .site-nav {
+    display: flex; gap: 1.5rem; flex-wrap: wrap;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--line);
+  }
+  .site-nav a { color: var(--muted); text-decoration: none; }
+  .site-nav a:first-child { color: var(--text); font-weight: 700; margin-right: auto; }
+  .site-nav a:hover, .site-nav a[aria-current] { color: var(--text); }
+
+  #graphic-design {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 5rem;
+  }
+  .gd-head { max-width: 38rem; margin-bottom: 3rem; }
+  .gd-head h2 {
+    font-size: clamp(2.2rem, 6vw, 4rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin: 0 0 1rem;
+  }
+  .gd-head p { color: var(--muted); margin: 0; font-size: 1.05rem; }
+
+  .gd-grid { columns: 3 260px; column-gap: 1rem; }
+  .gd-item {
+    display: block; width: 100%;
+    margin: 0 0 1rem; padding: 0;
+    border: 0; background: var(--placeholder);
+    break-inside: avoid; cursor: zoom-in;
+  }
+  .gd-item img { display: block; width: 100%; height: auto; }
+  .gd-item:focus-visible { outline: 3px solid var(--text); outline-offset: 3px; }
+
+  .gd-lightbox {
+    position: fixed; inset: 0; z-index: 1000;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(10, 10, 10, 0.94);
+  }
+  .gd-lightbox[hidden] { display: none; }
+  .gd-lightbox img { max-width: 90vw; max-height: 86vh; }
+  .gd-btn {
+    position: absolute; background: none; border: 0;
+    color: #fff; cursor: pointer; font-size: 2.6rem; line-height: 1;
+    padding: 0.5rem 1rem;
+  }
+  .gd-btn:hover { opacity: 0.7; }
+  .gd-btn:focus-visible { outline: 2px solid #fff; }
+  .gd-close { top: 0.5rem; right: 0.75rem; }
+  .gd-prev { left: 0.5rem; top: 50%; transform: translateY(-50%); }
+  .gd-next { right: 0.5rem; top: 50%; transform: translateY(-50%); }
+  .gd-count {
+    position: absolute; bottom: 1rem; left: 0; right: 0;
+    text-align: center; color: #bbb; font-size: 0.9rem;
+  }
+  footer { border-top: 1px solid var(--line); color: var(--muted); padding: 1.5rem; text-align: center; }
+  footer a { color: var(--text); }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="index.html">Claire Natasha Chella</a>
+  <a href="media.html">Media</a>
+  <a href="it.html">IT</a>
+  <a href="design.html" aria-current="page">Graphic Design</a>
+</nav>
+
+<section id="graphic-design">
+  <div class="gd-head">
+    <h2>Graphic Design</h2>
+    <p>A selection of branding, posters, social media and print work. Click any piece to view it larger.</p>
+  </div>
+  <div class="gd-grid" id="gd-grid"></div>
+</section>
+
+<footer>
+  <p>Need a design? <a href="mailto:tashachella@gmail.com">tashachella@gmail.com</a></p>
+  <p>© 2026 Claire Natasha Chella</p>
+</footer>
+
+<div class="gd-lightbox" id="gd-lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
+  <button class="gd-btn gd-close" id="gd-close" aria-label="Close">&times;</button>
+  <button class="gd-btn gd-prev" id="gd-prev" aria-label="Previous image">&lsaquo;</button>
+  <img id="gd-lightbox-img" alt="">
+  <button class="gd-btn gd-next" id="gd-next" aria-label="Next image">&rsaquo;</button>
+  <div class="gd-count" id="gd-count"></div>
+</div>
+
+<script>
+  const TOTAL  = 65;           // number of images
+  const FOLDER = "images/";    // folder holding img1 ... img65
+  const EXT    = ".png";       // your images are PNG
+
+  const grid = document.getElementById("gd-grid");
+  const box = document.getElementById("gd-lightbox");
+  const boxImg = document.getElementById("gd-lightbox-img");
+  const count = document.getElementById("gd-count");
+  let current = 1;
+  let opener = null;
+
+  for (let i = 1; i <= TOTAL; i++) {
+    const btn = document.createElement("button");
+    btn.className = "gd-item";
+    btn.type = "button";
+    btn.setAttribute("aria-label", "View graphic design work " + i + " larger");
+
+    const img = document.createElement("img");
+    img.src = FOLDER + "img" + i + EXT;
+    img.alt = "Graphic design work " + i;
+    img.loading = "lazy";
+
+    btn.appendChild(img);
+    btn.addEventListener("click", () => open(i, btn));
+    grid.appendChild(btn);
+  }
+
+  function show(n) {
+    current = ((n - 1 + TOTAL) % TOTAL) + 1;
+    boxImg.src = FOLDER + "img" + current + EXT;
+    boxImg.alt = "Graphic design work " + current;
+    count.textContent = current + " / " + TOTAL;
+  }
+  function open(n, trigger) {
+    opener = trigger;
+    show(n);
+    box.hidden = false;
+    document.body.style.overflow = "hidden";
+    document.getElementById("gd-close").focus();
+  }
+  function close() {
+    box.hidden = true;
+    document.body.style.overflow = "";
+    if (opener) opener.focus();
+  }
+
+  document.getElementById("gd-close").addEventListener("click", close);
+  document.getElementById("gd-prev").addEventListener("click", () => show(current - 1));
+  document.getElementById("gd-next").addEventListener("click", () => show(current + 1));
+  box.addEventListener("click", (e) => { if (e.target === box) close(); });
+  document.addEventListener("keydown", (e) => {
+    if (box.hidden) return;
+    if (e.key === "Escape") close();
+    if (e.key === "ArrowLeft") show(current - 1);
+    if (e.key === "ArrowRight") show(current + 1);
+  });
+</script>
+
+</body>
+</html>

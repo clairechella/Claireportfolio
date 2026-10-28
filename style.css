@@ -1,184 +1,40 @@
-/* ========== Global Reset ========== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #fdfdfd;
-    color: #333;
-    line-height: 1.7;
-    padding: 20px;
-  }
-  
-  /* ========== Header ========== */
-  header {
-    text-align: center;
-    background-color: #1f1f1f;
-    color: #fff;
-    padding: 40px 20px;
-    border-radius: 12px;
-    margin-bottom: 30px;
-  }
-  
-  header a {
-    color: #ffd700;
-    text-decoration: none;
-  }
-  
-  header a:hover {
-    text-decoration: underline;
-  }
-  
-  /* ========== Navigation ========== */
-  nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    list-style: none;
-    margin-bottom: 30px;
-    flex-wrap: wrap;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: #1f1f1f;
-    font-weight: bold;
-    padding: 8px 12px;
-    border-radius: 8px;
-    transition: background 0.3s ease;
-  }
-  
-  nav ul li a:hover {
-    background-color: #e0e0e0;
-  }
-  
-  /* ========== Section Styling ========== */
-  section {
-    margin-bottom: 50px;
-    padding: 20px;
-    border-radius: 12px;
-    background-color: #fafafa;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  }
-  
-  section h2 {
-    margin-bottom: 15px;
-    font-size: 1.6rem;
-    border-bottom: 2px solid #ccc;
-    padding-bottom: 5px;
-    color: #333;
-  }
-  
-  /* ========== Job Cards ========== */
-  .job-card {
-    background-color: #fff;
-    padding: 20px;
-    border-left: 5px solid #00bcd4;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    transition: transform 0.2s ease;
-  }
-  
-  .job-card:hover {
-    transform: scale(1.02);
-  }
-  
-  .job-card h3 {
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  .job-card span {
-    font-size: 0.9em;
-    color: #888;
-  }
-  
-  .job-card ul {
-    list-style: disc inside;
-    color: #444;
-  }
-  
-  /* ========== Skills ========== */
-  .skills-category {
-    margin-bottom: 20px;
-  }
-  
-  .skills-category h4 {
-    font-weight: bold;
-    color: #4caf50;
-    margin-bottom: 8px;
-  }
-  
-  .skills-category p {
-    color: #444;
-  }
-  
-  /* ========== Volunteer Section ========== */
-  #volunteer {
-    background-color: #fff0f5;
-    border-left: 5px solid #ff69b4;
-  }
-  
-  .volunteer-list {
-    list-style: square inside;
-    margin-top: 10px;
-    color: #555;
-  }
-  
-  .volunteer-list li {
-    margin-bottom: 8px;
-  }
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--ink:#17171c;--paper:#f3f3f0;--muted:#5f5f69}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.7;padding:24px}
+main{max-width:1000px;margin:0 auto}
+a{color:#0b5cad}
+a:focus-visible{outline:3px solid #0b5cad;outline-offset:2px}
+header{padding:36px 0 28px}
+h1{font-size:clamp(2.2rem,7vw,4rem);line-height:1.05;letter-spacing:-.02em}
+.role{font-size:1.15rem;margin:10px 0 4px}
+header p{color:var(--muted)}
+.doors{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-bottom:28px}
+.door{display:flex;flex-direction:column;gap:8px;min-height:230px;padding:28px;border-radius:6px;text-decoration:none;transition:transform .2s}
+.door:hover,.door:focus-visible{transform:translateY(-4px)}
+.d-title{font-size:4.2rem;line-height:1}
+.go{margin-top:auto;font-weight:700}
+.door.media{background:#0f0b0c;color:#f1ebe8;border-bottom:6px solid #d4213d}
+.door.media .d-title{font-family:'Bebas Neue',Impact,sans-serif;letter-spacing:.03em}
+.door.media .go{color:#ff5a72}
+.door.it{background:#0d1117;color:#c9d1d9;border:1px solid #30363d;font-family:'JetBrains Mono',ui-monospace,Consolas,monospace;font-size:.92rem}
+.door.it .d-title{font-family:'JetBrains Mono',ui-monospace,Consolas,monospace;color:#58a6ff;font-size:3.4rem}
+.door.it .go{color:#3fb950}
+nav{display:flex;flex-wrap:wrap;gap:6px 22px;margin-bottom:28px;padding-bottom:14px;border-bottom:1px solid #d0d0ca}
+nav a{color:var(--ink);font-weight:600;text-decoration:none}
+nav a:hover{text-decoration:underline}
+section{margin-bottom:34px}
+h2{font-size:1.5rem;margin-bottom:14px}
+.job{padding:4px 0 4px 16px;border-left:3px solid #c3c3bb;margin-bottom:18px}
+.job h3{font-size:1.05rem}
+.job span{display:block;font-size:.9rem;font-weight:400;color:var(--muted)}
+ul{padding-left:20px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+h4{margin-bottom:4px}
+footer{color:var(--muted);font-size:.9rem;margin-top:40px;padding-top:14px;border-top:1px solid #d0d0ca}
+@media(prefers-reduced-motion:reduce){.door{transition:none}}
+.door.design{background:#fff;color:var(--ink);border:2px solid var(--ink);font-family:'Helvetica Neue',Helvetica,Arial,sans-serif}
+.door.design .d-title{font-weight:700;letter-spacing:-.03em}
+.door.design .go{text-decoration:underline}
 
-  /* ========== Awards & Honors ========== */
-#awards {
-    background-color: #fffbea;
-    border-left: 5px solid #ffd700;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 40px;
-  }
-  
-  .awards-list {
-    list-style: circle inside;
-    margin-top: 10px;
-    color: #555;
-  }
-  
-  .awards-list li {
-    margin-bottom: 8px;
-    font-weight: 500;
-  }
-  
-  
-  /* ========== Certifications ========== */
-  #certifications {
-    background-color: #e6f7ff;
-    border-left: 5px solid #1e90ff;
-  }
-  
-  #certifications p {
-    font-weight: bold;
-    color: #333;
-  }
-  
-  /* ========== Contact Section ========== */
-  #contact a {
-    color: #1e90ff;
-    text-decoration: none;
-  }
-  
-  #contact a:hover {
-    text-decoration: underline;
-  }
-  
-  /* ========== Footer ========== */
-  footer {
-    text-align: center;
-    color: #aaa;
-    font-size: 0.9rem;
-    margin-top: 60px;
-  }
-  
+header.intro{display:flex;align-items:center;gap:32px;flex-wrap:wrap}
+.portrait{width:170px;height:170px;border-radius:50%;object-fit:cover;object-position:center top;border:4px solid var(--ink)}
